@@ -78,11 +78,8 @@ export default function FlashCard({
               <h3 className="font-display mt-3 text-5xl leading-tight font-bold text-sea md:text-6xl">
                 {item.word}
               </h3>
-              <p className="mt-5 font-mono text-lg text-brick" aria-label={`${item.word} 美式音標 ${item.ipa_us}，英式音標 ${item.ipa_uk}`}>
+              <p className="mt-5 font-mono text-lg text-brick" aria-label={`${item.word} 音標 ${item.ipa_us}，點擊 HEAR IT 可聽發音`}>
                 /{item.ipa_us}/
-                {item.ipa_uk && item.ipa_uk !== item.ipa_us && (
-                  <span className="ml-3 text-muted-foreground">/{item.ipa_uk}/</span>
-                )}
               </p>
             </div>
             <div className="flex items-center justify-between border-t border-border pt-4">

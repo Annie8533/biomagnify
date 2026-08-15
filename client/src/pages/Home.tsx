@@ -88,7 +88,7 @@ export default function Home() {
             {NAV.map((n, i) => (
               <a
                 key={n.no}
-                href={["#evidence", "#chain", "#library", "#speaking"][i]}
+                href={n.no === "00" ? "#evidence" : n.no === "01" ? "#chain" : n.no === "02" ? "#library" : "#speaking"}
                 className="group flex items-start gap-3 border-l-2 border-transparent py-2.5 pl-3 transition-colors hover:border-sea"
               >
                 <span className="font-display text-[10px] tracking-widest text-brick">
@@ -116,6 +116,7 @@ export default function Home() {
           {/* ===== Hero ===== */}
           <section className="border-b border-border">
             <div className="grid gap-8 px-6 py-12 md:grid-cols-[1.1fr_0.9fr] md:px-10 md:py-16 lg:px-14">
+              {/* 整頁英文介紹句（對應 NAV 00） */}
               <div>
                 <p className="mb-5 flex items-center gap-3 font-display text-[11px] font-semibold tracking-[0.3em] text-sea uppercase">
                   <span className="inline-block w-8 border-t border-brick" />
@@ -182,6 +183,9 @@ export default function Home() {
                   <br />
                   <span className="text-brick">再開始記。</span>
                 </h2>
+                <p className="mt-3 font-display text-sm font-semibold italic text-brick">
+                  Look before you memorize.
+                </p>
                 <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
                   一個塑膠微粒的旅程，可以拆成四個可以聽懂、可以複述的節點。先記住這四個節點，單字就會自己歸位。
                 </p>
@@ -190,7 +194,7 @@ export default function Home() {
                 每個節點都有一組代表詞：記住它們的因果順序，整份教材的單字就串起來了。
               </p>
             </div>
-            <div className="mt-10 grid grid-cols-1 gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
+            <div id="chain" className="mt-10 grid grid-cols-1 gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-4 scroll-mt-16">
               {CHAIN.map((c) => (
                 <div key={c.no} className="bg-card p-6 transition-colors hover:bg-accent/40">
                   <div className="flex items-center justify-between border-b-2 border-brick pb-3">
@@ -248,6 +252,9 @@ export default function Home() {
                   <br />
                   <span className="text-brick">讓它留下來。</span>
                 </h2>
+                <p className="mt-3 font-display text-sm font-semibold italic text-brick">
+                  Flip it over, and it stays.
+                </p>
                 <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
                   每張卡都來自教材的 46 個核心詞彙，依背誦優先順序排列。翻面看中文，按下播放，把發音放進耳朵裡。
                 </p>
@@ -297,6 +304,9 @@ export default function Home() {
                   <br />
                   <span className="text-brick">走到會說。</span>
                 </h2>
+                <p className="mt-3 font-display text-sm font-semibold italic text-brick">
+                  From recognition to your own voice.
+                </p>
                 <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
                   做完一輪閃卡，選一個詞，用自己的聲音把它送回塑膠的故事裡。
                 </p>
