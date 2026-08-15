@@ -11,9 +11,9 @@ import VocabIndex from "@/components/VocabIndex";
 import { useVocabState, speakWord } from "@/hooks/useVocabState";
 import { SECTION_NAMES, SECTION_SUB } from "@/lib/vocab";
 
-const HERO_IMG = "/manus-storage/mp-hero_af7587d3.png";
-const LOGO_IMG = "/manus-storage/mp-logo_58db2448.png";
-const STRATA_IMG = "/manus-storage/mp-strata_0a136db1.png";
+const HERO_IMG = "/assets/mp-hero.jpg";
+const LOGO_IMG = "/assets/mp-logo.jpg";
+const STRATA_IMG = "/assets/mp-strata.jpg";
 
 const NAV = [
   { no: "00", label: "先看證據", sub: "建立食物鏈地圖" },
